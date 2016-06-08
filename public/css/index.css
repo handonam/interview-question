@@ -1,0 +1,760 @@
+/*==============*\
+ # CSS Order inspired by Inverted Triangle CSS (ITCSS) by Harry Roberts
+ #
+ # CSS Files are ordered from lowest specificity to highest (top to bottom)
+ # 1. Settings - Stores the variables/constants
+ # 2. Functions - Where all mixins/functions are stored
+ # 3. Generic/Third Party - All third party libraries , including resets
+ # 4. Base - Bare element properties
+ # 5. Objects - Layout classes. First layer to have class-based selectors.
+ # 6. Components - Full cosmetic styling with css organized into components
+ # 7. Trumps - Utility/helper/hacks/overrides with the highest specificity, used to trump all the above.
+\*==============*/
+/*--------------*\
+ # Swatches
+\*--------------*/
+/*--------------*\
+ # Font sizes
+\*--------------*/
+/*--------------*\
+ # Miscellaneous Variables
+\*--------------*/
+/*--------------*\
+ # Font Functions
+\*--------------*/
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+/*--------------*\
+ # Font Styling
+\*--------------*/
+html,
+body {
+  color: #333;
+  font-family: 'Helvetica';
+  font-size: 14px;
+  line-height: 1.78571rem; }
+
+h1 {
+  font-size: 2.42857rem;
+  line-height: 1.38235; }
+
+h2 {
+  font-size: 2.14286rem;
+  line-height: 1.4; }
+
+h3 {
+  font-size: 1.85714rem;
+  line-height: 1.42308; }
+
+h4 {
+  font-size: 1.57143rem;
+  line-height: 1.45455; }
+
+h5 {
+  font-size: 1.28571rem;
+  line-height: 1.5; }
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.78571; }
+
+a {
+  color: #21AEBF; }
+
+a.Red {
+  color: #ef2e07; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+a, button, input, textarea, select {
+  font-family: 'Helvetica';
+  outline: none; }
+
+/*
+* Skeleton V1.2 - Low-Specificity Fluid Layout, Modified by Hanam Do
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Config Variables
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+/* Configs
+================================================== */
+/* #Base 960 Grid
+================================================== */
+.s-Container {
+  position: relative;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0; }
+
+.s-Column {
+  float: left;
+  display: inline;
+  margin-left: 1.04167%;
+  margin-right: 1.04167%; }
+
+.s-Column--Reverse {
+  float: right; }
+
+.s-Row {
+  margin-bottom: 4.16667%; }
+
+/* Nested Column Classes */
+.s-Alpha {
+  margin-left: 0; }
+
+.s-Omega {
+  margin-right: 0; }
+
+/* Base Grid */
+.s-One {
+  width: 4.16667%; }
+
+.s-Two {
+  width: 10.41667%; }
+
+.s-Three {
+  width: 16.66667%; }
+
+.s-Four {
+  width: 22.91667%; }
+
+.s-Five {
+  width: 29.16667%; }
+
+.s-Six {
+  width: 35.41667%; }
+
+.s-Seven {
+  width: 41.66667%; }
+
+.s-Eight {
+  width: 47.91667%; }
+
+.s-Nine {
+  width: 54.16667%; }
+
+.s-Ten {
+  width: 60.41667%; }
+
+.s-Eleven {
+  width: 66.66667%; }
+
+.s-Twelve {
+  width: 72.91667%; }
+
+.s-Thirteen {
+  width: 79.16667%; }
+
+.s-Fourteen {
+  width: 85.41667%; }
+
+.s-Fifteen {
+  width: 91.66667%; }
+
+.s-Sixteen {
+  width: 97.91667%; }
+
+.s-OneThird {
+  width: 31.25%; }
+
+.s-TwoThirds {
+  width: 64.58333%; }
+
+/* Offsets */
+.s-OffsetByOne {
+  padding-left: 6.25%; }
+
+.s-OffsetByTwo {
+  padding-left: 12.5%; }
+
+.s-OffsetByThree {
+  padding-left: 18.75%; }
+
+.s-OffsetByFour {
+  padding-left: 25%; }
+
+.s-OffsetByFive {
+  padding-left: 31.25%; }
+
+.s-OffsetBySix {
+  padding-left: 37.5%; }
+
+.s-OffsetBySeven {
+  padding-left: 43.75%; }
+
+.s-OffsetByEight {
+  padding-left: 50%; }
+
+.s-OffsetByNine {
+  padding-left: 56.25%; }
+
+.s-OffsetByTen {
+  padding-left: 62.5%; }
+
+.s-OffsetByEleven {
+  padding-left: 68.75%; }
+
+.s-OffsetByTwelve {
+  padding-left: 75%; }
+
+.s-OffsetByThirteen {
+  padding-left: 81.25%; }
+
+.s-OffsetByFourteen {
+  padding-left: 87.5%; }
+
+.s-OffsetByFifteen {
+  padding-left: 93.75%; }
+
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .s-Container {
+    width: 90%; }
+
+  .s-Column {
+    margin-left: 1.30208%;
+    margin-right: 1.30208%; }
+
+  .s-Alpha {
+    margin-left: 0;
+    margin-right: 1.30208%; }
+
+  .s-Omega {
+    margin-right: 0;
+    margin-left: 1.30208%; }
+
+  .s-Alpha.s-Omega {
+    margin-left: 0;
+    margin-right: 0; }
+
+  .s-One {
+    width: 3.64583%; }
+
+  .s-Two {
+    width: 9.89583%; }
+
+  .s-Three {
+    width: 16.14583%; }
+
+  .s-Four {
+    width: 22.39583%; }
+
+  .s-Five {
+    width: 28.64583%; }
+
+  .s-Six {
+    width: 34.89583%; }
+
+  .s-Seven {
+    width: 41.14583%; }
+
+  .s-Eight {
+    width: 47.39583%; }
+
+  .s-Nine {
+    width: 53.64583%; }
+
+  .s-Ten {
+    width: 59.89583%; }
+
+  .s-Eleven {
+    width: 66.14583%; }
+
+  .s-Twelve {
+    width: 72.39583%; }
+
+  .s-Thirteen {
+    width: 78.64583%; }
+
+  .s-Fourteen {
+    width: 84.89583%; }
+
+  .s-Fifteen {
+    width: 91.14583%; }
+
+  .s-Sixteen {
+    width: 97.39583%; }
+
+  .s-OneThird {
+    width: 30.72917%; }
+
+  .s-TwoThirds {
+    width: 64.0625%; } }
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 479px) {
+  .s-Container {
+    width: 95%; }
+
+  .s-Column {
+    margin: 0; }
+
+  .s-One,
+  .s-Two,
+  .s-Three,
+  .s-Four,
+  .s-Five,
+  .s-Six,
+  .s-Seven,
+  .s-Eight,
+  .s-Nine,
+  .s-Ten,
+  .s-Eleven,
+  .s-Twelve,
+  .s-Thirteen,
+  .s-Fourteen,
+  .s-Fifteen,
+  .s-Sixteen,
+  .s-OneThird,
+  .s-TwoThirds {
+    width: 100%; }
+
+  .s-OffsetByOne,
+  .s-OffsetByTwo,
+  .s-OffsetByThree,
+  .s-OffsetByFour,
+  .s-OffsetByFive,
+  .s-OffsetBySix,
+  .s-OffsetBySeven,
+  .s-OffsetByEight,
+  .s-OffsetByNine,
+  .s-OffsetByTen,
+  .s-OffsetByEleven,
+  .s-OffsetByTwelve,
+  .s-OffsetByThirteen,
+  .s-OffsetByFourteen,
+  .s-OffsetByFifteen {
+    padding-left: 0; } }
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .s-Container {
+    width: 95%; }
+
+  .s-Column {
+    margin: 0; }
+
+  .s-One,
+  .s-Two,
+  .s-Three,
+  .s-Four,
+  .s-Five,
+  .s-Six,
+  .s-Seven,
+  .s-Eight,
+  .s-Nine,
+  .s-Ten,
+  .s-Eleven,
+  .s-Twelve,
+  .s-Thirteen,
+  .s-Fourteen,
+  .s-Fifteen,
+  .s-Sixteen,
+  .s-OneThird,
+  .s-TwoThirds {
+    width: 100%; } }
+/* #Clearing
+================================================== */
+/* Use clearfix class on parent to clear nested columns,
+or wrap each row of columns in a <div class="Row">
+Note: Or don't use the word clearfix at all because the word is horrible semantically.
+Or use less/sass to extend this stylesheet instead.*/
+.Clear,
+.Group:before,
+.Group:after,
+.s-Clearfix:before,
+.s-Clearfix:after,
+.s-Container:after,
+.s-Row:before,
+.s-Row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.Group:after,
+.s-Clearfix:after,
+.s-Container:after,
+.s-Row:after {
+  clear: both; }
+
+.s-Row,
+.s-Clearfix,
+.Group {
+  zoom: 1; }
+
+/* Removed .Clear here to make sure that if you want to break columns out,
+you have a reason for doing so. (They should normally end up in a new row.) */
+/* #Misc
+================================================== */
+.s-FullWidth {
+  width: 100%; }
+
+.s-Wrapper {
+  height: 100%;
+  margin: 0 auto-150px;
+  /* the bottom margin is the negative value of the footer's height */
+  min-height: 100%; }
+
+/*==============*\
+ # Common Animation Functions
+\*==============*/
+/*--------------*\
+ # Fade
+\*--------------*/
+@keyframes animate-fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.a-FadeIn {
+  animation: animate-fadeIn ease-in 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  /* make things invisible upon start */ }
+
+/*--------------*\
+ # Fade
+\*--------------*/
+@keyframes animate-slideDownFade {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+.a-slideDownFade {
+  animation: animate-slideDownFade ease-in 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  /* make things invisible upon start */ }
+
+.a--DelayOne {
+  animation-delay: 0.7s; }
+
+.a--DelayTwo {
+  animation-delay: 1.2s; }
+
+.a--DelayThree {
+  animation-delay: 1.6s; }
+
+/*--------------*\
+ # Slide up
+\*--------------*/
+@keyframes animate-slideUp {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(0, -200%, 0); } }
+.ng-enter {
+  z-index: 8888; }
+
+.ng-leave {
+  z-index: 7777; }
+
+/**
+ * Generic  (Default Blue)
+ */
+.Button,
+.Button:disabled,
+.Button--Disabled {
+  background-color: #00b5cf;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 15px 10px;
+  min-width: 120px;
+  padding: 15px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: baseline; }
+
+.Button:hover {
+  background-color: #0b8597;
+  cursor: pointer; }
+
+.Button:disabled,
+.Button--Disabled,
+.Button--Disabled:hover {
+  background-color: #00b5cf;
+  cursor: default;
+  opacity: .5; }
+
+/**
+ * Blue
+ */
+.Button--Blue:hover {
+  background-color: #0b8597; }
+
+.Button--Blue,
+.Button--Blue:disabled,
+.Button--Blue.Button--Disabled {
+  background-color: #00b5cf; }
+
+/**
+ * Orange
+ */
+.Button--Orange:hover {
+  background-color: #ce5a00; }
+
+.Button--Orange,
+.Button--Orange:disabled,
+.Button--Orange.Button--Disabled {
+  background-color: #ff7000; }
+
+/**
+ * White Hollow
+ */
+.Button--WhiteHollow:hover {
+  background-color: #fff;
+  color: #21AEBF; }
+
+.Button--WhiteHollow,
+.Button--WhiteHollow:disabled,
+.Button--WhiteHollow.Button--Disabled {
+  background: none;
+  box-shadow: inset 0px 0px 0px 2px #fff;
+  color: #fff; }
+
+/**
+ * Blue Hollow
+ */
+.Button--BlueHollow:hover {
+  background-color: #00b5cf;
+  color: #fff; }
+
+.Button--BlueHollow,
+.Button--BlueHollow:disabled,
+.Button--BlueHollow.Button--Disabled {
+  background: none;
+  box-shadow: inset 0px 0px 0px 2px #00b5cf;
+  color: #00b5cf; }
+
+/**
+ * Red Hover
+ */
+.Button--RedHover:hover {
+  background: #ef2e07;
+  color: #fff; }
+
+/**
+ * Small State
+ */
+.Button--Small,
+.Button--Small:disabled {
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: initial;
+  padding: 6px 14px; }
+
+/**
+ * Prepended Social Icon
+ */
+.Button__SocialIcon {
+  margin-right: 5px;
+  vertical-align: text-bottom; }
+
+/**
+ * Loading Animation
+ */
+.Button.Button--Loading {
+  color: rgba(100, 100, 100, 0); }
+
+.Button__Loading {
+  border-radius: 3px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.Button__LoadingIcon {
+  height: 30px;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px; }
+
+.Button__LoadingIcon--Small {
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  width: 10px; }
+
+.Button--Disabled.Button--DisabledStandard {
+  opacity: 1; }
+
+@media only screen and (max-width: 479px) {
+  .Button--SmallOnMobilePortrait {
+    margin-bottom: 0;
+    margin-top: 0;
+    min-width: initial;
+    padding: 6px 14px; } }
+@media only screen and (max-width: 767px) {
+  .Button--FullWidthMobile {
+    width: 100%; }
+
+  .Button--SmallOnMobile {
+    margin-bottom: 0;
+    margin-top: 0;
+    min-width: initial;
+    padding: 6px 14px; } }
+@media only screen and (max-width: 959px) {
+  .Button--SmallOnTabletDown {
+    margin-bottom: 0;
+    margin-top: 0;
+    min-width: initial;
+    padding: 6px 14px; } }
+.FormField {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  font-size: 1rem;
+  height: 45px;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  width: calc(100% - 20px); }
+
+.FormField[disabled] {
+  background-color: #eaeaea; }
+
+.FormField:required {
+  box-shadow: none; }
+
+/** TODO Make all browsers do the same**/
+.FormField::-webkit-input-placeholder {
+  color: #cdcdcd; }
+
+.FormField:focus {
+  border-color: #00b5cf; }
+
+.FormField--Error {
+  border-color: #ef2e07;
+  color: #ef2e07; }
+
+.FormField--BottomFlush {
+  margin-bottom: 0; }
+
+.FormField--SideFlush {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+
+.FormField--Textarea {
+  height: auto; }
+
+.Welcome__Button {
+  display: block;
+  margin: auto;
+  width: 200px; }
+
+.Welcome__Field {
+  display: block;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**
+ * Place for utility styles
+ */
+.u-Hidden {
+  display: none; }
+
+.u-White {
+  color: #fff; }
+
+.u-TextCenter {
+  text-align: center; }
+
+.u-InlineBlock {
+  display: inline-block; }
+
+.u-Inline {
+  display: inline; }
+
+@media only screen and (max-width: 767px) {
+  .u-HideMobile {
+    display: none; }
+
+  .u-ShowMobile {
+    display: block; } }
+@media only screen and (max-width: 479px) {
+  .u-HideMobilePortrait {
+    display: none; }
+
+  .u-ShowMobilePortrait {
+    display: block; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .u-HideMobileLandscape {
+    display: none; }
+
+  .u-ShowMobileLandscape {
+    display: block; } }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,14 @@
+/*--------------*\
+ # Font Functions
+\*--------------*/
+@function rem($target, $context: $baseSize) {
+	@return ($target / $context) * 1rem;
+}
+
+@function em($target, $context: $baseSize) {
+	@return ($target / $context) * 1em;
+}
+
+@function lineHeight($target, $context: $baseSize) {
+	@return ($target / $context);
+}

@@ -1,0 +1,282 @@
+/*
+* Skeleton V1.2 - Low-Specificity Fluid Layout, Modified by Hanam Do
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Config Variables
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+/* Configs
+================================================== */
+$skeletonMargin:         1.041666666666667%;
+$skeletonMarginTablet:   1.302083333333333%;
+$skeletonMarginbottom:   4.166666666666667%;
+
+$skeletonWidthOne:       4.166666666666667%;
+$skeletonWidthTwo:       10.41666666666667%;
+$skeletonWidthThree:     16.66666666666667%;
+$skeletonWidthFour:      22.91666666666667%;
+$skeletonWidthFive:      29.16666666666667%;
+$skeletonWidthSix:       35.41666666666667%;
+$skeletonWidthSeven:     41.66666666666667%;
+$skeletonWidthEight:     47.91666666666667%;
+$skeletonWidthNine:      54.16666666666667%;
+$skeletonWidthTen:       60.41666666666667%;
+$skeletonWidthEleven:    66.66666666666667%;
+$skeletonWidthTwelve:    72.91666666666667%;
+$skeletonWidthThirteen:  79.16666666666667%;
+$skeletonWidthFourteen:  85.41666666666667%;
+$skeletonWidthFifteen:   91.66666666666667%;
+$skeletonWidthSixteen:   97.91666666666667%;
+
+$skeletonWidthOneThird:  31.25%;
+$skeletonWidthTwoThirds: 64.58333333333333%;
+
+$skeletonTabletWidthOne:       3.645833333333333%;
+$skeletonTabletWidthTwo:       9.895833333333333%;
+$skeletonTabletWidthThree:     16.14583333333333%;
+$skeletonTabletWidthFour:      22.39583333333333%;
+$skeletonTabletWidthFive:      28.64583333333333%;
+$skeletonTabletWidthSix:       34.89583333333333%;
+$skeletonTabletWidthSeven:     41.14583333333333%;
+$skeletonTabletWidthEight:     47.39583333333333%;
+$skeletonTabletWidthNine:      53.64583333333333%;
+$skeletonTabletWidthTen:       59.89583333333333%;
+$skeletonTabletWidthEleven:    66.14583333333333%;
+$skeletonTabletWidthTwelve:    72.39583333333333%;
+$skeletonTabletWidthThirteen:  78.64583333333333%;
+$skeletonTabletWidthFourteen:  84.89583333333333%;
+$skeletonTabletWidthFifteen:   91.14583333333333%;
+$skeletonTabletWidthSixteen:   97.39583333333333%;
+
+$skeletonTabletWidthOneThird:  30.72916666666667%;
+$skeletonTabletWidthTwoThirds: 64.0625%;
+
+$mqDesktop: 'only screen and (min-width: 960px)';
+$mqTabletPortrait: 'only screen and (min-width: 768px) and (max-width: 959px)';
+$mqTabletLandscapeAndDown: 'only screen and (max-width: 959px)';
+$mqMobile: 'only screen and (max-width: 767px)';
+$mqMobileLandscape: 'only screen and (min-width: 480px) and (max-width: 767px)';
+$mqMobilePortrait: 'only screen and (max-width: 479px)';
+$mqMobileSmallPortrait: 'only screen and (max-width: 374px)';
+
+/* #Base 960 Grid
+================================================== */
+
+    .s-Container             { position: relative; width:90%; max-width: 1440px; margin: 0 auto; padding: 0; }
+    .s-Column                { float: left; display: inline; margin-left: $skeletonMargin; margin-right: $skeletonMargin; }
+    .s-Column--Reverse       { float: right; }
+    .s-Row                   { margin-bottom: $skeletonMarginbottom; }
+
+    /* Nested Column Classes */
+    .s-Alpha                 { margin-left: 0; }
+    .s-Omega                 { margin-right: 0; }
+
+    /* Base Grid */
+    .s-One                   { width: $skeletonWidthOne; }
+    .s-Two                   { width: $skeletonWidthTwo; }
+    .s-Three                 { width: $skeletonWidthThree; }
+    .s-Four                  { width: $skeletonWidthFour; }
+    .s-Five                  { width: $skeletonWidthFive; }
+    .s-Six                   { width: $skeletonWidthSix; }
+    .s-Seven                 { width: $skeletonWidthSeven; }
+    .s-Eight                 { width: $skeletonWidthEight; }
+    .s-Nine                  { width: $skeletonWidthNine; }
+    .s-Ten                   { width: $skeletonWidthTen; }
+    .s-Eleven                { width: $skeletonWidthEleven; }
+    .s-Twelve                { width: $skeletonWidthTwelve; }
+    .s-Thirteen              { width: $skeletonWidthThirteen; }
+    .s-Fourteen              { width: $skeletonWidthFourteen; }
+    .s-Fifteen               { width: $skeletonWidthFifteen; }
+    .s-Sixteen               { width: $skeletonWidthSixteen; }
+
+    .s-OneThird              { width: $skeletonWidthOneThird; }
+    .s-TwoThirds             { width: $skeletonWidthTwoThirds; }
+
+    /* Offsets */
+    .s-OffsetByOne           { padding-left: 6.25%; }
+    .s-OffsetByTwo           { padding-left: 12.5%; }
+    .s-OffsetByThree         { padding-left: 18.75%; }
+    .s-OffsetByFour          { padding-left: 25%; }
+    .s-OffsetByFive          { padding-left: 31.25%; }
+    .s-OffsetBySix           { padding-left: 37.5%; }
+    .s-OffsetBySeven         { padding-left: 43.75%; }
+    .s-OffsetByEight         { padding-left: 50%; }
+    .s-OffsetByNine          { padding-left: 56.25%; }
+    .s-OffsetByTen           { padding-left: 62.5%; }
+    .s-OffsetByEleven        { padding-left: 68.75%; }
+    .s-OffsetByTwelve        { padding-left: 75%; }
+    .s-OffsetByThirteen      { padding-left: 81.25%; }
+    .s-OffsetByFourteen      { padding-left: 87.5%; }
+    .s-OffsetByFifteen       { padding-left: 93.75%; }
+
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+
+    @media #{$mqTabletPortrait} {
+        .s-Container               { width: 90%; }
+        .s-Column                  { margin-left: $skeletonMarginTablet; margin-right: $skeletonMarginTablet;  }
+        .s-Alpha                   { margin-left: 0; margin-right: $skeletonMarginTablet; }
+        .s-Omega                   { margin-right: 0; margin-left: $skeletonMarginTablet; }
+        .s-Alpha.s-Omega           { margin-left: 0; margin-right: 0; }
+
+        .s-One                   { width: $skeletonTabletWidthOne; }
+        .s-Two                   { width: $skeletonTabletWidthTwo; }
+        .s-Three                 { width: $skeletonTabletWidthThree; }
+        .s-Four                  { width: $skeletonTabletWidthFour; }
+        .s-Five                  { width: $skeletonTabletWidthFive; }
+        .s-Six                   { width: $skeletonTabletWidthSix; }
+        .s-Seven                 { width: $skeletonTabletWidthSeven; }
+        .s-Eight                 { width: $skeletonTabletWidthEight; }
+        .s-Nine                  { width: $skeletonTabletWidthNine; }
+        .s-Ten                   { width: $skeletonTabletWidthTen; }
+        .s-Eleven                { width: $skeletonTabletWidthEleven; }
+        .s-Twelve                { width: $skeletonTabletWidthTwelve; }
+        .s-Thirteen              { width: $skeletonTabletWidthThirteen; }
+        .s-Fourteen              { width: $skeletonTabletWidthFourteen; }
+        .s-Fifteen               { width: $skeletonTabletWidthFifteen; }
+        .s-Sixteen               { width: $skeletonTabletWidthSixteen; }
+
+        .s-OneThird              { width: $skeletonTabletWidthOneThird; }
+        .s-TwoThirds             { width: $skeletonTabletWidthTwoThirds; }
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+
+    @media #{$mqMobilePortrait} {
+        .s-Container { width: 95%; }
+        .s-Column   { margin: 0; }
+
+        .s-One,
+        .s-Two,
+        .s-Three,
+        .s-Four,
+        .s-Five,
+        .s-Six,
+        .s-Seven,
+        .s-Eight,
+        .s-Nine,
+        .s-Ten,
+        .s-Eleven,
+        .s-Twelve,
+        .s-Thirteen,
+        .s-Fourteen,
+        .s-Fifteen,
+        .s-Sixteen,
+        .s-OneThird,
+        .s-TwoThirds  { width: 100%; }
+
+        .s-OffsetByOne,
+        .s-OffsetByTwo,
+        .s-OffsetByThree,
+        .s-OffsetByFour,
+        .s-OffsetByFive,
+        .s-OffsetBySix,
+        .s-OffsetBySeven,
+        .s-OffsetByEight,
+        .s-OffsetByNine,
+        .s-OffsetByTen,
+        .s-OffsetByEleven,
+        .s-OffsetByTwelve,
+        .s-OffsetByThirteen,
+        .s-OffsetByFourteen,
+        .s-OffsetByFifteen { padding-left: 0; }
+
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+
+    @media #{$mqMobileLandscape} {
+        .s-Container { width: 95% }
+        .s-Column { margin: 0; }
+
+        .s-One,
+        .s-Two,
+        .s-Three,
+        .s-Four,
+        .s-Five,
+        .s-Six,
+        .s-Seven,
+        .s-Eight,
+        .s-Nine,
+        .s-Ten,
+        .s-Eleven,
+        .s-Twelve,
+        .s-Thirteen,
+        .s-Fourteen,
+        .s-Fifteen,
+        .s-Sixteen,
+        .s-OneThird,
+        .s-TwoThirds { width: 100%; }
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="Row">
+    Note: Or don't use the word clearfix at all because the word is horrible semantically.
+    Or use less/sass to extend this stylesheet instead.*/
+
+    .Clear,
+    .Group:before,
+    .Group:after,
+    .s-Clearfix:before,
+    .s-Clearfix:after,
+    .s-Container:after,
+    .s-Row:before,
+    .s-Row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    .Group:after,
+    .s-Clearfix:after,
+    .s-Container:after,
+    .s-Row:after { clear: both; }
+    .s-Row,
+    .s-Clearfix,
+    .Group { zoom: 1; }
+
+    /* Removed .Clear here to make sure that if you want to break columns out,
+    you have a reason for doing so. (They should normally end up in a new row.) */
+
+/* #Misc
+================================================== */
+.s-FullWidth {width: 100%;}
+.s-Wrapper {
+	height: 100%;
+	margin: 0 auto -$footerHeight; /* the bottom margin is the negative value of the footer's height */
+  min-height: 100%;
+}

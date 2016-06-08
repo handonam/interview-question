@@ -1,0 +1,34 @@
+/*==============*\
+ # CSS Order inspired by Inverted Triangle CSS (ITCSS) by Harry Roberts
+ #
+ # CSS Files are ordered from lowest specificity to highest (top to bottom)
+ # 1. Settings - Stores the variables/constants
+ # 2. Functions - Where all mixins/functions are stored
+ # 3. Generic/Third Party - All third party libraries , including resets
+ # 4. Base - Bare element properties
+ # 5. Objects - Layout classes. First layer to have class-based selectors.
+ # 6. Components - Full cosmetic styling with css organized into components
+ # 7. Trumps - Utility/helper/hacks/overrides with the highest specificity, used to trump all the above.
+\*==============*/
+// 1. Settings
+@import 'lib/settings';
+
+// 2. Functions
+@import 'lib/functions';
+
+// 3. Generic/Third Party
+@import 'lib/reset';
+
+// 4. Base
+@import 'lib/base';
+@import 'lib/typography';
+
+// 5. Objects
+@import 'lib/skeleton';
+@import 'lib/animations';
+
+// 6. Components
+@import 'components/index';
+
+// 7. Trumps
+@import 'lib/utilities';

@@ -1,0 +1,49 @@
+/**
+ * Place for utility styles
+ */
+.u-Hidden {
+  display: none;
+}
+
+.u-White {
+  color: $white;
+}
+
+.u-TextCenter {
+  text-align: center;
+}
+
+.u-InlineBlock {
+  display: inline-block;
+}
+
+.u-Inline {
+  display: inline;
+}
+
+@media #{$mqMobile} {
+  .u-HideMobile {
+    display: none;
+  }
+  .u-ShowMobile {
+    display: block;
+  }
+}
+
+@media #{$mqMobilePortrait} {
+  .u-HideMobilePortrait {
+    display: none;
+  }
+  .u-ShowMobilePortrait {
+    display: block;
+  }
+}
+
+@media #{$mqMobileLandscape} {
+  .u-HideMobileLandscape {
+    display: none;
+  }
+  .u-ShowMobileLandscape {
+    display: block;
+  }
+}

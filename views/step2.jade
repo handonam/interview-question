@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.Questions
+    h1.u-textCenter Step Two: Your programming
+    form.Questions__Form.s-Container(action="/question/step2" method="post")
+      img.Questions__Image(src="/images/icon-audit-support-retina.png")
+      label.Questions__Label Why do you like programming?
+      textarea.Questions__Input.FormField(name="about")
+      button.Questions__Submit.Button(type="submit") Next

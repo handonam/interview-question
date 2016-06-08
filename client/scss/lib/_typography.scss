@@ -1,0 +1,37 @@
+/*--------------*\
+ # Font Styling
+\*--------------*/
+html,
+body {
+  color: $baseFontColor;
+  font-family: 'Helvetica';
+  font-size: $baseSize * 1px;
+  line-height: rem($baseHeight);
+}
+
+h1 { font-size: rem($baseH1); line-height: lineHeight($baseH1Height, $baseH1); }
+h2 { font-size: rem($baseH2); line-height: lineHeight($baseH2Height, $baseH2); }
+h3 { font-size: rem($baseH3); line-height: lineHeight($baseH3Height, $baseH3); }
+h4 { font-size: rem($baseH4); line-height: lineHeight($baseH4Height, $baseH4); }
+h5 { font-size: rem($baseH5); line-height: lineHeight($baseH5Height, $baseH5); }
+h6 { font-size: rem($baseH6); line-height: lineHeight($baseH6Height, $baseH6); }
+
+a {
+  color: $hotBlue;
+}
+a.Red {
+  color: $red;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a, button, input, textarea, select {
+  font-family: 'Helvetica';
+  outline: none;
+}

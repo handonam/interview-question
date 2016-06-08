@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.Questions
+    h1.u-textCenter Step One: Tell us about yourself
+    form.Questions__Form.s-Container(action="/question/step1" method="post")
+      img.Questions__Image(src="/images/icon-accurate-retina.png")
+      label.Questions__Label What's your name? And what do you do?
+      textarea.Questions__Input.FormField(name="about")
+      button.Questions__Submit.Button(type="submit") Next

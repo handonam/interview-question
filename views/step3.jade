@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.Questions
+    h1.u-textCenter Step Three: Any last words?
+    form.Questions__Form.s-Container(action="/question/step3" method="post")
+      img.Questions__Image(src="/images/icon-max-refund-retina.png")
+      label.Questions__Label Anything else you want to add?
+      textarea.Questions__Input.FormField(name="about")
+      button.Questions__Submit.Button(type="submit") Next

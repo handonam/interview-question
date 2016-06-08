@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  div.Welcome.s-Container
+    h1.Welcome__H1.u-TextCenter Welcome to Intuit
+    h4.Welcome__H2.u-TextCenter What's your name?
+    form(action="/users" method="POST")
+      input.Welcome__Field.FormField(type="text" name="name")
+      button.Welcome__Button.Button(type="submit") Next
